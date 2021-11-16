@@ -62,7 +62,7 @@ if (!isDev && cluster.isMaster) {
 
     auth: {
       user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      pass: process.env.GENERATEDGMAILPASSWORD,
     },
   });
 
@@ -83,9 +83,9 @@ if (!isDev && cluster.isMaster) {
 
     console.log("req body:", req.body);
     let mailOptions = {
-      // from: `${req.body.email}`,
+      from: `${req.body.email},`,
       // // ! testing with new settings
-      from: "contact@edithsdev.com",
+      // from: "contact@edithsdev.com",
       // ! How to update that from field in my gmail shows the sender and not my email address?
       // sender: `${req.body.email}`,
       to: process.env.EMAIL,
