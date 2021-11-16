@@ -81,7 +81,8 @@ if (!isDev && cluster.isMaster) {
   app.post("/send", function (req, res) {
     // ? Mail Options
 
-    console.log("req body:", req.body);
+    // console.log("req body:", req.body);
+    // console.log("req body:", req.body.name);
     let mailOptions = {
       from: `${req.body.email},`,
       // // ! testing with new settings
@@ -92,7 +93,7 @@ if (!isDev && cluster.isMaster) {
       // Allows me to respond to the sender
       replyTo: `${req.body.email}`,
       // subject: `Message from:${req.body.name}`,
-      subject: `${req.body.subject}`,
+      subject: `From: ${req.body.name}, Subject: ${req.body.subject}`,
       text: `${req.body.message}`,
     };
     //  Send Mail
