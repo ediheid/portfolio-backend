@@ -24,3 +24,5 @@
 - Ionos email is contact@edithsdev.com
 
 - 2 step verification is needed on gmail this is why I have two app passwords as Nodemailer blocks with 2 factor verification but 'send as' needs it to work properly.
+
+- email server dns is setup in Vercel
