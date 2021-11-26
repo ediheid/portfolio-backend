@@ -113,12 +113,11 @@ if (!isDev && cluster.isMaster) {
   // ! ==================================
 
   // ? Download CV Section
-  // Commented out as I'm running the CV download through my frontend
 
-  // Get request to download
-  // app.get("/", (req, res) => {
-  //   res.download("./CV-Edith-Heidmann.pdf");
-  // });
+  // Get request to download CV
+  app.get("/", (req, res) => {
+    res.download("./CV-Edith-Heidmann.pdf");
+  });
 
   // ? ==================================
 
