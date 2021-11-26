@@ -112,6 +112,12 @@ if (!isDev && cluster.isMaster) {
 
   // ! ==================================
 
+  // ? Download CV Section
+
+  app.get("/", (req, res) => {
+    res.download("./CV-Edith-Heidmann.pdf");
+  });
+
   //  Priority serve any static files.
   app.use(express.static(path.resolve(__dirname, "../client/build")));
 
