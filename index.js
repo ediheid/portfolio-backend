@@ -116,7 +116,7 @@ if (!isDev && cluster.isMaster) {
 
   // Get request to download CV
   app.get("/", (req, res) => {
-    res.download("./CV-Edith-Heidmann.pdf");
+    res.download("./edith-heidmann-cv.pdf");
   });
 
   // ? ==================================
