@@ -117,7 +117,7 @@ if (!isDev && cluster.isMaster) {
   // Get request to download CV
   // Testing auto deploy...
   app.get("/", (req, res) => {
-    res.download("./Files/edith-heidmann-cv.pdf");
+    res.download("./edith-heidmann-cv.pdf");
   });
 
   // ? ==================================
